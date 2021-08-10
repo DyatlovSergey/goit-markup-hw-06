@@ -387,6 +387,14 @@
             </li>
           </ul>
         </div>
+        <div>
+          <h2 class="join">Подпишитесь на рассылку</h2>
+          <form>
+            <label for="mail"></label>
+            <input type="email" name="mail" id="mail" placeholder="E-mail" />
+            <button type="submit">Подписаться</button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -402,6 +410,27 @@
             />
           </svg>
         </button>
+        <form>
+          <ul class="list">
+            <li>
+              <label for="name">Имя</label>
+              <input type="text" name="name" id="name" />
+            </li>
+            <li>
+              <label for="tel">Телефон</label>
+              <input type="tel" name="tel" id="tel" />
+            </li>
+            <li>
+              <label for="mail">Почта</label>
+              <input type="email" name="mail" id="mail" />
+            </li>
+          </ul>
+          <label for="comment">Комментарий</label>
+          <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+          <input type="checkbox" name="policy" id="policy" />
+          <label for="policy">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+          <button type="submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
