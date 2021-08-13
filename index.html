@@ -415,22 +415,31 @@
           <ul class="list">
             <li class="form-field">
               <label for="name" class="form-label">Имя</label>
-              <input type="text" name="name" id="name"  class="form-input"/>
+              <input type="text" name="name" id="name" class="form-input" />
             </li>
             <li class="form-field">
               <label for="tel" class="form-label">Телефон</label>
-              <input type="tel" name="tel" id="tel" class="form-input"/>
+              <input type="tel" name="tel" id="tel" class="form-input" />
             </li>
             <li class="form-field">
               <label for="mail" class="form-label">Почта</label>
-              <input type="email" name="mail" id="mail" class="form-input"/>
+              <input type="email" name="mail" id="mail" class="form-input" />
             </li>
           </ul>
           <label for="comment" class="comment-label">Комментарий</label>
-          <textarea class="input-text" name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
+          <textarea
+            class="input-text"
+            name="comment"
+            id="comment"
+            cols="30"
+            rows="10"
+            placeholder="Введите текст"
+          ></textarea>
           <input type="checkbox" name="policy" id="policy" />
-          <label for="policy">Соглашаюсь с рассылкой и принимаю Условия договора</label>
-          <button type="submit">Отправить</button>
+          <label for="policy" class="policy"
+            >Соглашаюсь с рассылкой и принимаю Условия договора</label
+          >
+          <button type="submit" class="btn-send">Отправить</button>
         </form>
       </div>
     </div>
