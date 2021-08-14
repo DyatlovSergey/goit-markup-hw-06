@@ -656,11 +656,22 @@ button {
 
   border: none;
   background: transparent;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-close:hover svg {
+  fill: var(--blue-text);
 }
 
 .btn-close svg {
-  width: 30px;
-  height: 30px;
+  width: 18px;
+  height: 18px;
 }
 
 .form {
@@ -669,15 +680,15 @@ button {
   margin-left: auto;
   margin-right: auto;
   padding: 40px 39px 40px 41px;
-  outline: 1px solid tomato;
 }
 
 .form-field {
   /* outline: 1px solid blue; */
-  margin-bottom: 28px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   width: 448px;
+  position: relative;
 }
 
 .form .title {
@@ -689,7 +700,8 @@ button {
 }
 
 .form-field label,
-.comment-label {
+.comment label {
+  display: inline-block;
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
@@ -707,11 +719,26 @@ button {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
+  position: relative;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus + .icon-person {
+  fill: var(--blue-text);
 }
 
 .input-text {
   width: 448px;
   height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 12px 16px;
+  outline: none;
+}
+
+.form-field:focus-within > .form-input {
+  border: 3px solid var(--blue-text);
+  cursor: pointer;
+  outline: none;
 }
 
 .input-text::placeholder {
@@ -719,13 +746,45 @@ button {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
-  padding: 12px 16px;
 }
-
+.send {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .policy {
+  display: flex;
+  align-items: center;
   font-size: 14px;
   line-height: 24px;
   color: #757575;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.link-policy {
+  color: var(--blue-text);
+  text-decoration-line: underline;
+}
+
+.icon {
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.checkbox:checked + .icon {
+  background-image: url(../images/icon\ check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--blue-text);
 }
 
 .btn-send {
@@ -743,20 +802,22 @@ button {
   border-radius: 4px;
 }
 
-/* .form-input:focus {
-border: 1px solid #2196F3;
-box-sizing: border-box;
-border-radius: 4px;
+.icon-person {
+  fill: #212121;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transform: translateY(-50%); */
+}
 
-} */
-
-/* .form-field input::placeholder {
-font-size: 12px;
-line-height: 1.17;
-letter-spacing: 0.01em;
-color: rgba(117, 117, 117, 0.5);
-
-} */
+.subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .subscribe input {
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -766,6 +827,7 @@ color: rgba(117, 117, 117, 0.5);
   background-color: transparent;
   padding: 15px 16px;
   width: 358px;
+  outline: none;
 }
 
 .subscribe input::placeholder {
@@ -775,6 +837,11 @@ color: rgba(117, 117, 117, 0.5);
 }
 
 .btn-subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  /* display: inline-block; */
   font-weight: bold;
   font-size: 16px;
   line-height: 1.8;
@@ -785,4 +852,12 @@ color: rgba(117, 117, 117, 0.5);
   border-radius: 4px;
   border: 1px solid var(--blue-text);
   padding: 10px 29px;
+}
+
+.icon-send {
+  /* display: inline-block; */
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
